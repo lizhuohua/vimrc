@@ -114,6 +114,9 @@ vnoremap L g_
 " Ctrl+l，Ctrl+h，move the cursor in insert mode
 inoremap <C-l> <right>
 inoremap <C-h> <left>
+" 映射;为:从而进入命令行时不需按shift
+" Map ; to : and save a million keystrokes
+nnoremap ; :
 
 
 "===============================================================
@@ -154,6 +157,9 @@ set nostartofline
 " 一直显示Airline
 " Always appear Airline
 set laststatus=2
+" 显示buffer名
+" Display all buffers when there's only one tab open
+let g:airline#extensions#tabline#enabled = 1
 
 "clang-format
 map <C-K> :pyf ~/.vim/plugin/clang-format.py<cr>
