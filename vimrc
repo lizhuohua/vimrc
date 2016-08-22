@@ -56,10 +56,14 @@ syntax on
 set cindent
 set shiftwidth=4
 set tabstop=4
+set smartindent
 set autoindent
 set ignorecase smartcase
 set wildmenu
 set wildignore=*.o,*~,*.pyc,*.class
+
+" 在上下移动光标时，光标的上方或下方至少会保留显示的行数
+set scrolloff=7
 
 " 让C++的public和private的缩进变正常
 " To get public or private lable indented
