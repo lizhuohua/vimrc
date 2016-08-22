@@ -58,6 +58,8 @@ set shiftwidth=4
 set tabstop=4
 set autoindent
 set ignorecase smartcase
+set wildmenu
+set wildignore=*.o,*~,*.pyc,*.class
 
 " 让C++的public和private的缩进变正常
 " To get public or private lable indented
