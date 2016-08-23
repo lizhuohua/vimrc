@@ -26,8 +26,9 @@ let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0
 " 当离开插入模式时，关闭preview窗口
 " Close the preview window when you leave insert mode
-autocmd InsertLeave * if pumvisible()==0|pclose|endif
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+let g:ycm_autoclose_preview_window_after_insertion=1
+"autocmd InsertLeave * if pumvisible()==0|pclose|endif
+"autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 " <leader>+d 跳转到定义
 " <leader>+d Jump to definition
 nnoremap <leader>d :YcmCompleter GoToDefinitionElseDeclaration<CR>
@@ -163,6 +164,9 @@ set nostartofline
 " 一直显示Airline
 " Always appear Airline
 set laststatus=2
+" 在preview窗口中不显示airline
+" No airline in preview window
+let g:airline_exclude_preview = 1
 " 显示buffer名
 " Display all buffers when there's only one tab open
 let g:airline#extensions#tabline#enabled = 1
