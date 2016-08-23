@@ -178,7 +178,7 @@ imap <C-K> <c-o>:pyf ~/.vim/plugin/clang-format.py<cr>
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 nmap s <Plug>(easymotion-overwin-f)
 "nmap s <Plug>(easymotion-overwin-f2)
-" 开启智能大小写，例如a能匹配到a和A，但A智能匹配到a
+" 开启智能大小写，例如a能匹配到a和A，但A只能匹配到a
 " Turn on case insensitive feature
 let g:EasyMotion_smartcase = 1
 map <Leader>J <Plug>(easymotion-j)
