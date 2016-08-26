@@ -10,6 +10,7 @@ call plug#begin()
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'easymotion/vim-easymotion'
 	Plug 'scrooloose/nerdcommenter'
+	Plug 'scrooloose/syntastic'
 	Plug 'Yggdroot/indentLine'
 	Plug 'terryma/vim-expand-region'
 	Plug 'ctrlpvim/ctrlp.vim'
