@@ -16,6 +16,7 @@ call plug#begin()
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'SirVer/ultisnips'
 	Plug 'honza/vim-snippets'
+	Plug 'Chiel92/vim-autoformat'
 call plug#end()
 
 
@@ -203,3 +204,14 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+
+"===============================================================
+" syntastic的配置
+" Config for syntastic
+"===============================================================
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+"autocmd InsertLeave * SyntasticCheck
