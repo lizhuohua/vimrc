@@ -17,6 +17,7 @@ call plug#begin()
 	Plug 'SirVer/ultisnips'
 	Plug 'honza/vim-snippets'
 	Plug 'Chiel92/vim-autoformat'
+	Plug 'suan/vim-instant-markdown'
 call plug#end()
 
 
@@ -215,3 +216,10 @@ let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 "autocmd InsertLeave * SyntasticCheck
+
+
+"===============================================================
+" vim-autoformat的配置
+" Config for vim-autoformat
+"===============================================================
+au BufWrite * :Autoformat
