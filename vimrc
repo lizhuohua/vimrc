@@ -4,20 +4,20 @@
 "================================================================
 let mapleader="\<Space>"
 call plug#begin()
-	Plug 'Valloric/YouCompleteMe'
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
-	Plug 'terryma/vim-multiple-cursors'
-	Plug 'easymotion/vim-easymotion'
-	Plug 'scrooloose/nerdcommenter'
-	Plug 'scrooloose/syntastic'
-	Plug 'Yggdroot/indentLine'
-	Plug 'terryma/vim-expand-region'
-	Plug 'ctrlpvim/ctrlp.vim'
-	Plug 'SirVer/ultisnips'
-	Plug 'honza/vim-snippets'
-	Plug 'Chiel92/vim-autoformat'
-	Plug 'suan/vim-instant-markdown'
+Plug 'Valloric/YouCompleteMe'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'easymotion/vim-easymotion'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'Yggdroot/indentLine'
+Plug 'terryma/vim-expand-region'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'Chiel92/vim-autoformat'
+Plug 'suan/vim-instant-markdown'
 call plug#end()
 
 
@@ -39,7 +39,7 @@ nnoremap <leader>d :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 "================================================================
 " 让vim打开时回到上次编辑的位置
-" Move to the point you edited last time when you start vim 
+" Move to the point you edited last time when you start vim
 "================================================================
 autocmd BufReadPost *
 			\ if line("'\"")>0&&line("'\"")<=line("$") |
@@ -152,7 +152,7 @@ noremap <silent> <C-l> :bnext<CR>
 " <Leader>q Closes the current buffer
 nnoremap <silent> <Leader>q :bd<CR>
 
-" <Leader>Q 关闭当前窗口 
+" <Leader>Q 关闭当前窗口
 " <Leader>Q Closes the current window
 nnoremap <silent> <Leader>Q <C-w>c
 
@@ -174,9 +174,6 @@ let g:airline_exclude_preview = 1
 " Display all buffers when there's only one tab open
 let g:airline#extensions#tabline#enabled = 1
 
-"clang-format
-map <C-K> :pyf ~/.vim/plugin/clang-format.py<cr>
-imap <C-K> <c-o>:pyf ~/.vim/plugin/clang-format.py<cr>
 
 "===============================================================
 " Easymotion的配置
