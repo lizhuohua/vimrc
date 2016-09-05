@@ -126,7 +126,7 @@ inoremap <C-l> <right>
 inoremap <C-h> <left>
 " 映射;为:从而进入命令行时不需按shift
 " Map ; to : and save a million keystrokes
-nnoremap ; :
+noremap ; :
 
 
 "===============================================================
