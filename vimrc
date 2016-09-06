@@ -4,20 +4,20 @@
 "================================================================
 let mapleader="\<Space>"
 call plug#begin()
-Plug 'Valloric/YouCompleteMe'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'easymotion/vim-easymotion'
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/syntastic'
-Plug 'Yggdroot/indentLine'
-Plug 'terryma/vim-expand-region'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'Chiel92/vim-autoformat'
-Plug 'suan/vim-instant-markdown'
+	Plug 'Valloric/YouCompleteMe'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'terryma/vim-multiple-cursors'
+	Plug 'easymotion/vim-easymotion'
+	Plug 'scrooloose/nerdcommenter'
+	Plug 'scrooloose/syntastic'
+	Plug 'Yggdroot/indentLine'
+	Plug 'terryma/vim-expand-region'
+	Plug 'ctrlpvim/ctrlp.vim'
+	Plug 'SirVer/ultisnips'
+	Plug 'honza/vim-snippets'
+	Plug 'Chiel92/vim-autoformat'
+	Plug 'suan/vim-instant-markdown'
 call plug#end()
 
 
@@ -220,3 +220,6 @@ let g:syntastic_check_on_wq = 0
 " Config for vim-autoformat
 "===============================================================
 au BufWrite * :Autoformat
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:formatdef_clangformat = "'clang-format -lines='.a:firstline.':'.a:lastline.' --assume-filename=\"'.expand('%:p').'\" -style=\"{BasedOnStyle: LLVM, AlignTrailingComments: true, '.(&textwidth ? 'ColumnLimit: '.&textwidth.', ' : '').(&expandtab ? 'UseTab: Never, IndentWidth: '.shiftwidth() : 'UseTab: ForIndentation, IndentWidth: 4').'}\"'"
