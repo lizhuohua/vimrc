@@ -75,8 +75,13 @@ set cinoptions=g0
 
 " 字体和字号
 " Font and font size
-set guifont=Monaco\ 14 " English
-set guifontwide=Microsoft\ Yahei\ 14 "Chinese
+if has('unix')
+	set guifont=Monaco\ 14 " English
+	set guifontwide=Microsoft\ Yahei\ 14 "Chinese
+elseif has('win32')||has('win64')
+	set guifont=Monaco:h14 " English
+	set guifontwide=Microsoft_Yahei:h14 "Chinese
+endif
 
 " 关闭菜单栏和工具栏
 " Close menu and toolbar
