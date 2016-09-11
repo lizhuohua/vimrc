@@ -62,7 +62,7 @@ flags = [
 '-isystem',
 '../BoostParts',
 '-isystem',
-'/usr/include/c++/6.1.1',
+'/usr/include/c++/6.2.1',
 '-isystem',
 '/usr/include',
 '-isystem',
