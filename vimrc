@@ -18,6 +18,8 @@ call plug#begin()
 	Plug 'honza/vim-snippets'
 	Plug 'Chiel92/vim-autoformat'
 	Plug 'suan/vim-instant-markdown'
+	Plug 'scrooloose/nerdtree'
+	Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 
@@ -228,3 +230,11 @@ au BufWrite * :Autoformat
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:formatdef_clangformat = "'clang-format -lines='.a:firstline.':'.a:lastline.' --assume-filename=\"'.expand('%:p').'\" -style=\"{BasedOnStyle: LLVM, AlignTrailingComments: true, '.(&textwidth ? 'ColumnLimit: '.&textwidth.', ' : '').(&expandtab ? 'UseTab: Never, IndentWidth: '.shiftwidth() : 'UseTab: ForIndentation, IndentWidth: 4').'}\"'"
+
+
+"===============================================================
+" NERDTree的配置
+" Config for NERDTree
+"===============================================================
+noremap <F2> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
