@@ -1,3 +1,8 @@
+" 不使用Vi兼容模式
+" no Vi-compatible
+set nocompatible
+
+
 "================================================================
 " 用vim-plug做插件管理系统
 " Use vim-plug for plugin manager
@@ -53,6 +58,7 @@ autocmd BufReadPost *
 " 普通的一些配置
 " Some normal configs
 "===============================================================
+set backspace=indent,eol,start
 set incsearch
 set encoding=utf-8
 set cursorline
