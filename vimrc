@@ -63,6 +63,7 @@ set incsearch
 set encoding=utf-8
 set cursorline
 set number
+set relativenumber
 syntax enable
 syntax on
 set cindent
