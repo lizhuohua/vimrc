@@ -128,10 +128,19 @@ map <Leader>p "+p
 " Use visual mode to select, or select the current line by default
 vnoremap <Leader>y "+y
 nnoremap <Leader>y V"+y
+" 对于长行，自动折行后按屏幕行移动而不是实际行
+" 对于j、k，若有命令计数，仍按实际行移动
+" When lines wrap, move according to display lines.
+" Use original j and k if there is a command count.
+noremap 0 g0
+noremap ^ g^
+noremap $ g$
+noremap <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <expr> k (v:count == 0 ? 'gk' : 'k')
 " H = 到行首, L = 到行尾
 " H = the beginning of the line, L = the end of the line
-noremap H ^
-noremap L $
+noremap H g^
+noremap L g$
 vnoremap L g_
 " Ctrl+l，Ctrl+h，在插入模式下左右移动光标
 " Ctrl+l，Ctrl+h，move the cursor in insert mode
