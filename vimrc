@@ -89,7 +89,7 @@ if has('unix')
 	set guifontwide=Microsoft\ Yahei\ 17 "Chinese
 elseif has('win32')||has('win64')
 	set guifont=Monaco:h14 " English
-	set guifontwide=NSimsun:h14 "Chinese
+	set guifontwide=Microsoft\ Yahei\ Mono:h14 "Chinese
 endif
 
 " Windows下使用DirectX进行渲染
