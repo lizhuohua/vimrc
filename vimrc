@@ -92,6 +92,15 @@ elseif has('win32')||has('win64')
 	set guifontwide=NSimsun:h14 "Chinese
 endif
 
+" Windows下使用DirectX进行渲染
+" Use DirectX in Windows
+if has('win32') || has('win64')
+	if (v:version == 704 && has("patch393")) || v:version > 704
+		set renderoptions=type:directx,level:0.50,
+					\gamma:1.0,contrast:0.0,geom:1,renmode:5,taamode:1
+    end
+end
+
 " 关闭菜单栏和工具栏
 " Close menu and toolbar
 set guioptions-=m
