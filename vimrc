@@ -108,10 +108,14 @@ if has('win32') || has('win64')
     end
 end
 
-" 关闭菜单栏和工具栏
-" Close menu and toolbar
+" 关闭菜单栏、工具栏以及滚动条
+" Disable menu, toolbar and scrollbars
 set guioptions-=m
 set guioptions-=T
+set guioptions-=r
+set guioptions-=R
+set guioptions-=l
+set guioptions-=L
 
 " 主题配色，考虑到终端下有些配色显示不正常，故分开设置
 " Color scheme, considering that some schemes may display abnormal
