@@ -58,6 +58,7 @@ autocmd BufReadPost *
 " 普通的一些配置
 " Some normal configs
 "===============================================================
+set mousemodel=popup
 set backspace=indent,eol,start
 set incsearch
 set encoding=utf-8
