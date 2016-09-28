@@ -75,6 +75,12 @@ set ignorecase smartcase
 set wildmenu
 set wildignore=*.o,*~,*.pyc,*.class
 
+" 防止Windows下菜单乱码
+if has('win32')||has('win64')
+	source $VIMRUNTIME/delmenu.vim
+	source $VIMRUNTIME/menu.vim
+endif
+
 " 在上下移动光标时，光标的上方或下方至少会保留显示的行数
 set scrolloff=7
 
