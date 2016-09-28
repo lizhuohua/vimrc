@@ -170,6 +170,11 @@ inoremap <C-h> <left>
 " 映射;为:从而进入命令行时不需按shift
 " Map ; to : and save a million keystrokes
 noremap ; :
+" 在命令行中使用类似Bash的快捷键
+" Bash like keys for the command line
+cnoremap <C-A> <Home>
+cnoremap <C-E> <End>
+cnoremap <C-K> <C-U>
 
 
 "===============================================================
