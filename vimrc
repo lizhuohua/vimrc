@@ -58,23 +58,42 @@ autocmd BufReadPost *
 " 普通的一些配置
 " Some normal configs
 "===============================================================
+" 关闭错误提示音
 set vb
 au GuiEnter * set t_vb=
+
+" Gvim下使用右键菜单
 set mousemodel=popup
+
+" 修正Windows下退格键删不掉东西的问题
 set backspace=indent,eol,start
+
+" 增强的搜索模式
 set incsearch
+set ignorecase smartcase
+
+" Vim默认使用的字符集
 set encoding=utf-8
+
+" 高亮光标所在行
 set cursorline
+
+" 显示相对行号
 set number
 set relativenumber
+
+" 启动代码高亮
 syntax enable
 syntax on
+
+" 关于缩进的设置
 set cindent
 set shiftwidth=4
 set tabstop=4
 set smartindent
 set autoindent
-set ignorecase smartcase
+
+" 增强命令行补全
 set wildmenu
 set wildignore=*.o,*~,*.pyc,*.class
 
