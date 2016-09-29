@@ -58,6 +58,8 @@ autocmd BufReadPost *
 " 普通的一些配置
 " Some normal configs
 "===============================================================
+set vb
+au GuiEnter * set t_vb=
 set mousemodel=popup
 set backspace=indent,eol,start
 set incsearch
