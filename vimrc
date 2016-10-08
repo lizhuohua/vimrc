@@ -196,6 +196,9 @@ noremap ; :
 cnoremap <C-A> <Home>
 cnoremap <C-E> <End>
 cnoremap <C-K> <C-U>
+" 让Ctrl+p和Ctrl+n也像上下键一样对历史记录进行过滤
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
 
 
 "===============================================================
