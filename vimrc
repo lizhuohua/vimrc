@@ -176,7 +176,7 @@ nnoremap <Leader>y V"+y
 " Use original j and k if there is a command count.
 noremap 0 g0
 noremap ^ g^
-noremap $ g$
+nnoremap $ g$
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 " H = 到行首, L = 到行尾
