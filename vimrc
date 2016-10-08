@@ -205,11 +205,17 @@ cnoremap <C-n> <Down>
 " <Leader>hljk 窗口间移动
 " <Leader>hljk = Move between windows
 "===============================================================
+" 垂直、水平划分窗口
+nnoremap <Leader>v :vsplit<CR>
+nnoremap <Leader>s :split<CR>
+" 窗口间移动
 nnoremap <Leader>h <C-w>h
 nnoremap <Leader>l <C-w>l
 nnoremap <Leader>j <C-w>j
 nnoremap <Leader>k <C-w>k
-
+" <Leader>Q 关闭当前窗口
+" <Leader>Q Closes the current window
+nnoremap <silent> <Leader>Q <C-w>c
 
 "===============================================================
 " Ctrl Left/h & Right/l buffer间切换
@@ -223,10 +229,6 @@ noremap <silent> <C-l> :bnext<CR>
 " <Leader>q 关闭当前buffer
 " <Leader>q Closes the current buffer
 nnoremap <silent> <Leader>q :bd<CR>
-
-" <Leader>Q 关闭当前窗口
-" <Leader>Q Closes the current window
-nnoremap <silent> <Leader>Q <C-w>c
 
 " <Leader>Ctrl+q 强制关闭当前buffer
 " <Leader>Ctrl+q Force Closes the current buffer
