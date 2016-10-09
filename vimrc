@@ -206,8 +206,8 @@ cnoremap <C-n> <Down>
 " <Leader>hljk = Move between windows
 "===============================================================
 " 垂直、水平划分窗口
-nnoremap <Leader>v :vsplit<CR>
-nnoremap <Leader>s :split<CR>
+nnoremap <silent> <Leader>v :vsplit<CR>
+nnoremap <silent> <Leader>s :split<CR>
 " 窗口间移动
 nnoremap <Leader>h <C-w>h
 nnoremap <Leader>l <C-w>l
