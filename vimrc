@@ -58,6 +58,11 @@ autocmd BufReadPost *
 " 普通的一些配置
 " Some normal configs
 "===============================================================
+" 使用鼠标
+if has('mouse')
+	set mouse=a
+endif
+
 " 关闭错误提示音
 set vb
 au GuiEnter * set t_vb=
