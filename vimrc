@@ -226,6 +226,7 @@ nnoremap <silent> <Leader>Q <C-w>c
 " Ctrl Left/h & Right/l buffer间切换
 " Ctrl Left/h & Right/l cycle between buffers
 "===============================================================
+set hidden
 noremap <silent> <C-left> :bprev<CR>
 noremap <silent> <C-h> :bprev<CR>
 noremap <silent> <C-right> :bnext<CR>
