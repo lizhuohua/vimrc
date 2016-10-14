@@ -76,9 +76,8 @@ set encoding=utf-8
 " 高亮光标所在行
 set cursorline
 
-" 显示相对行号
+" 显示行号
 set number
-set relativenumber
 
 " 启动代码高亮
 syntax enable
