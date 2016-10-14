@@ -13,7 +13,6 @@ call plug#begin()
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'easymotion/vim-easymotion'
 	Plug 'scrooloose/nerdcommenter'
-	Plug 'scrooloose/syntastic'
 	Plug 'Yggdroot/indentLine'
 	Plug 'terryma/vim-expand-region'
 	Plug 'ctrlpvim/ctrlp.vim'
@@ -23,6 +22,7 @@ call plug#begin()
 	Plug 'suan/vim-instant-markdown'
 	Plug 'scrooloose/nerdtree'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
+	Plug 'maralla/validator.vim'
 call plug#end()
 
 
@@ -258,16 +258,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-
-
-"===============================================================
-" syntastic的配置
-"===============================================================
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-"autocmd InsertLeave * SyntasticCheck
 
 
 "===============================================================
