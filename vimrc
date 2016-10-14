@@ -58,7 +58,7 @@ endif
 
 " 关闭错误提示音
 set vb
-au GuiEnter * set t_vb=
+set t_vb=
 
 " Gvim下使用右键菜单
 set mousemodel=popup
