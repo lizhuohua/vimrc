@@ -56,9 +56,9 @@ if has('mouse')
 	set mouse=a
 endif
 
-" 关闭错误提示音
-set vb
-set t_vb=
+" 关闭错误提示音和闪屏
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 " Gvim下使用右键菜单
 set mousemodel=popup
