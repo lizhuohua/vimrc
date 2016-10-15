@@ -144,6 +144,10 @@ endif
 let &termencoding=&encoding
 set fileencodings=utf-8,gb18030,gbk,gb2312,big5
 
+" 启用Vim自带的matchit插件
+runtime macros/matchit.vim
+
+
 "===============================================================
 " 好用的一些快捷键映射
 "===============================================================
