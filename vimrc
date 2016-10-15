@@ -23,6 +23,7 @@ call plug#begin()
 	Plug 'scrooloose/nerdtree'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'maralla/validator.vim'
+	Plug 'tpope/vim-surround'
 call plug#end()
 
 
