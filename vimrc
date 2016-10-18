@@ -24,6 +24,7 @@ call plug#begin()
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'maralla/validator.vim'
 	Plug 'tpope/vim-surround'
+	Plug 'lilydjwg/fcitx.vim'
 call plug#end()
 
 
