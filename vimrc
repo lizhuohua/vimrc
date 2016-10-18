@@ -281,10 +281,10 @@ let g:UltiSnipsEditSplit="vertical"
 "===============================================================
 " vim-autoformat的配置
 "===============================================================
+let g:formatdef_my_custom_clang = "\"clang-format -style=\'{BasedOnStyle: llvm, IndentWidth: 4}\'\""
+let g:formatters_cpp = ['my_custom_clang']
+autocmd FileType vim,tex let b:autoformat_autoindent=0
 au BufWrite * :Autoformat
-let g:autoformat_autoindent = 0
-let g:autoformat_retab = 0
-let g:formatdef_clangformat = "'clang-format -lines='.a:firstline.':'.a:lastline.' --assume-filename=\"'.expand('%:p').'\" -style=\"{BasedOnStyle: LLVM, AlignTrailingComments: true, '.(&textwidth ? 'ColumnLimit: '.&textwidth.', ' : '').(&expandtab ? 'UseTab: Never, IndentWidth: '.shiftwidth() : 'UseTab: ForIndentation, IndentWidth: 4').'}\"'"
 
 
 "===============================================================
