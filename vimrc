@@ -283,7 +283,7 @@ let g:UltiSnipsEditSplit="vertical"
 "===============================================================
 let g:formatdef_my_custom_clang = "\"clang-format -style=\'{BasedOnStyle: llvm, IndentWidth: 4}\'\""
 let g:formatters_cpp = ['my_custom_clang']
-autocmd FileType vim,tex let b:autoformat_autoindent=0
+let g:autoformat_autoindent = 0
 au BufWrite * :Autoformat
 
 
