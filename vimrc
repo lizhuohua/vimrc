@@ -221,7 +221,7 @@ nnoremap <Leader>j <C-w>j
 nnoremap <Leader>k <C-w>k
 
 " <Leader>Q 关闭当前窗口
-nnoremap <silent> <Leader>Q <C-w>c
+nnoremap <silent> <Leader>q <C-w>c
 
 "===============================================================
 " Ctrl Left/h & Right/l buffer间切换
@@ -236,7 +236,7 @@ noremap <silent> <C-right> :bnext<CR>
 noremap <silent> <C-l> :bnext<CR>
 
 " <Leader>q 关闭当前buffer
-nnoremap <silent> <Leader>q :bd<CR>
+nnoremap <silent> <C-q> :bd<CR>
 
 " <Leader>Ctrl+q 强制关闭当前buffer
 nnoremap <silent> <Leader><C-q> :bd!<CR>
