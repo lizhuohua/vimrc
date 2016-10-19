@@ -252,12 +252,27 @@ nnoremap <silent> <Leader><C-q> :bd!<CR>
 " 切换buffer时，不让光标每次都移到第一行
 set nostartofline
 
+
+"===============================================================
+" Airline的配置
+"===============================================================
 " 一直显示Airline
 set laststatus=2
+
 " 在preview窗口中不显示airline
 let g:airline_exclude_preview = 1
-" 显示buffer名
+
+" 顶部显示buffer名
 let g:airline#extensions#tabline#enabled = 1
+
+" 勉强掩盖gvim下linenr这个字符后面跟空格会乱码的bug
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+let g:airline_symbols.linenr = ':'
+
+" 使用powerline的字体，需要打好字体补丁
+let g:airline_powerline_fonts = 1
 
 
 "===============================================================
