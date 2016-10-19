@@ -149,6 +149,11 @@ set fileencodings=utf-8,gb18030,gbk,gb2312,big5
 " 启用Vim自带的matchit插件
 runtime macros/matchit.vim
 
+" 提高终端下的性能
+set ttyfast
+set ttyscroll=3
+set lazyredraw
+
 
 "===============================================================
 " 编辑文本文件时的配置
