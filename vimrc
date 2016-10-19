@@ -13,7 +13,7 @@ call plug#begin()
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'easymotion/vim-easymotion'
 	Plug 'scrooloose/nerdcommenter'
-	Plug 'Yggdroot/indentLine'
+	Plug 'nathanaelkane/vim-indent-guides'
 	Plug 'terryma/vim-expand-region'
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'SirVer/ultisnips'
@@ -300,3 +300,11 @@ au BufWrite * :Autoformat
 "===============================================================
 noremap <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+
+"===============================================================
+" vim-indent-guides的配置
+"===============================================================
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size=1
