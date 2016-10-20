@@ -110,7 +110,7 @@ set cinoptions=g0
 
 " 字体和字号
 if has('unix')
-	set guifont=Monaco\ 17 " English
+	set guifont=Monaco\ for\ Powerline\ 17 " English
 	set guifontwide=Microsoft\ Yahei\ 17 "Chinese
 elseif has('win32')||has('win64')
 	set guifont=Monaco:h14 " English
@@ -264,12 +264,6 @@ let g:airline_exclude_preview = 1
 
 " 顶部显示buffer名
 let g:airline#extensions#tabline#enabled = 1
-
-" 勉强掩盖gvim下linenr这个字符后面跟空格会乱码的bug
-if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
-endif
-let g:airline_symbols.linenr = ':'
 
 " 使用powerline的字体，需要打好字体补丁
 let g:airline_powerline_fonts = 1
