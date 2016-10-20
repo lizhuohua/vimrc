@@ -307,7 +307,7 @@ au BufWrite * :Autoformat
 "===============================================================
 " NERDTree的配置
 "===============================================================
-noremap <F2> :NERDTreeToggle<CR>
+noremap <silent> <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
