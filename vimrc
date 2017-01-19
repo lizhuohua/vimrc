@@ -22,7 +22,7 @@ call plug#begin()
 	Plug 'suan/vim-instant-markdown'
 	Plug 'scrooloose/nerdtree'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
-	"Plug 'maralla/validator.vim'
+	Plug 'w0rp/ale'
 	Plug 'tpope/vim-surround'
 	Plug 'lilydjwg/fcitx.vim'
 call plug#end()
@@ -275,7 +275,7 @@ let g:airline_powerline_fonts = 1
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 nmap s <Plug>(easymotion-overwin-f)
 "nmap s <Plug>(easymotion-overwin-f2)
-" 开启智能大小写，例如a能匹配到a和A，但A只能匹配到a
+" 开启智能大小写，例如a能匹配到a和A，但A只能匹配到A
 let g:EasyMotion_smartcase = 1
 map <Leader>J <Plug>(easymotion-j)
 map <Leader>K <Plug>(easymotion-k)
@@ -291,17 +291,16 @@ let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
 
 "===============================================================
 " vim-autoformat的配置
 "===============================================================
 let g:formatdef_my_custom_clang = "\"clang-format -style=\'{BasedOnStyle: llvm, IndentWidth: 4}\'\""
 let g:formatters_cpp = ['my_custom_clang']
+let g:formatters_c = ['my_custom_clang']
 let g:autoformat_autoindent = 0
-au BufWrite * :Autoformat
+" au BufWrite * :Autoformat
+noremap <F3> :Autoformat<CR>
 
 
 "===============================================================
@@ -317,3 +316,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size=1
+
+
+"===============================================================
+" ale的配置
+"===============================================================
+let g:ale_linters = {'c': []}
