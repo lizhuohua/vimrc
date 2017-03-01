@@ -25,6 +25,10 @@ call plug#begin()
 	Plug 'w0rp/ale'
 	Plug 'tpope/vim-surround'
 	Plug 'lilydjwg/fcitx.vim'
+	Plug 'joshdick/onedark.vim'
+	Plug 'jacoborus/tender.vim'
+	Plug 'sheerun/vim-polyglot'
+	Plug 'wellle/targets.vim'
 call plug#end()
 
 
@@ -134,12 +138,15 @@ set guioptions-=l
 set guioptions-=L
 
 " 主题配色，考虑到终端下有些配色显示不正常，故分开设置
-set t_Co=256
+"set t_Co=256
+set termguicolors
+let g:onedark_terminal_italics=1
+let g:airline_theme='onedark'
 if has('gui_running')
 	set background=dark
-	colorscheme monokai
+	colorscheme onedark
 else
-	colorscheme desert
+	colorscheme onedark
 endif
 
 " 防止中文乱码
@@ -243,7 +250,7 @@ noremap <silent> <C-h> :bprev<CR>
 noremap <silent> <C-right> :bnext<CR>
 noremap <silent> <C-l> :bnext<CR>
 
-" <Leader>q 关闭当前buffer
+" Ctrl+q 关闭当前buffer，仅适用于GVIM
 nnoremap <silent> <C-q> :bd<CR>
 
 " <Leader>Ctrl+q 强制关闭当前buffer
