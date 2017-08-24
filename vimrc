@@ -6,6 +6,7 @@ set nocompatible
 " 用vim-plug做插件管理系统
 "================================================================
 let mapleader="\<Space>"
+let maplocalleader = "\\"
 call plug#begin()
 	Plug 'Valloric/YouCompleteMe'
 	Plug 'vim-airline/vim-airline'
@@ -19,7 +20,7 @@ call plug#begin()
 	Plug 'SirVer/ultisnips'
 	Plug 'honza/vim-snippets'
 	Plug 'Chiel92/vim-autoformat'
-	Plug 'suan/vim-instant-markdown'
+	" Plug 'suan/vim-instant-markdown'
 	Plug 'scrooloose/nerdtree'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'w0rp/ale'
@@ -29,6 +30,13 @@ call plug#begin()
 	Plug 'jacoborus/tender.vim'
 	Plug 'sheerun/vim-polyglot'
 	Plug 'wellle/targets.vim'
+	Plug 'iamcco/markdown-preview.vim'
+	Plug 'godlygeek/tabular'
+	Plug 'plasticboy/vim-markdown'
+	Plug 'lervag/vimtex'
+	Plug 'jceb/vim-orgmode'
+	Plug 'tpope/vim-speeddating'
+	Plug 'mhinz/vim-startify'
 call plug#end()
 
 
@@ -161,12 +169,24 @@ set ttyfast
 set ttyscroll=3
 set lazyredraw
 
+" 搜索后按ESC自动关闭高亮显示
+" 在终端下会有延迟，GVim正常
+" https://stackoverflow.com/questions/11940801/mapping-esc-in-vimrc-causes-bizzare-arrow-behaviour
+if has('gui_running')
+  nnoremap <silent> <esc> :noh<return><esc>
+else
+  augroup no_highlight
+    autocmd TermResponse * nnoremap <silent> <esc> :noh<return><esc>
+	autocmd TermResponse * nnoremap <esc>^[ <esc>^[
+  augroup END
+end
+
 
 "===============================================================
 " 编辑文本文件时的配置
 "===============================================================
 " 编辑文本类型时启用拼写检查
-autocmd FileType text setlocal spell spelllang=en,cjk
+autocmd FileType text,markdown setlocal spell spelllang=en,cjk
 
 " 折行时自动缩进
 set breakindent
@@ -329,3 +349,16 @@ let g:indent_guides_guide_size=1
 " ale的配置
 "===============================================================
 let g:ale_linters = {'c': []}
+
+"===============================================================
+" markdown-preview的配置
+"===============================================================
+let g:mkdp_path_to_chrome = "chromium"
+
+let g:vimtex_latexmk_options = "-xelatex -shell-escape -verbose -pdf -file-line-error -synctex=1 -interaction=nonstopmode"
+let g:vimtex_view_general_viewer = "evince"
+
+"===============================================================
+" vim-markdown的配置
+"===============================================================
+let g:vim_markdown_folding_disabled = 1
