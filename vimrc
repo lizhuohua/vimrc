@@ -31,6 +31,7 @@ call plug#begin()
 	Plug 'sheerun/vim-polyglot'
 	Plug 'wellle/targets.vim'
 	Plug 'iamcco/markdown-preview.vim'
+	Plug 'iamcco/mathjax-support-for-mkdp'
 	Plug 'godlygeek/tabular'
 	Plug 'plasticboy/vim-markdown'
 	Plug 'lervag/vimtex'
@@ -49,8 +50,13 @@ let g:ycm_confirm_extra_conf=0
 let g:ycm_autoclose_preview_window_after_insertion=1
 "autocmd InsertLeave * if pumvisible()==0|pclose|endif
 "autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+" CTRL-O和CTRL-I来前后跳转
 " <leader>+d 跳转到定义
 nnoremap <leader>d :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" <leader>+i 跳转到头文件
+nnoremap <leader>i :YcmCompleter GoToInclude<CR>
+" <leader>+t 获取变量类型
+nnoremap <leader>t :YcmCompleter GetType<CR>
 
 
 "================================================================
@@ -187,6 +193,8 @@ end
 "===============================================================
 " 编辑文本类型时启用拼写检查
 autocmd FileType text,markdown setlocal spell spelllang=en,cjk
+
+autocmd FileType text setlocal textwidth=0
 
 " 折行时自动缩进
 set breakindent
@@ -327,7 +335,7 @@ let g:formatters_cpp = ['my_custom_clang']
 let g:formatters_c = ['my_custom_clang']
 let g:autoformat_autoindent = 0
 " au BufWrite * :Autoformat
-noremap <F3> :Autoformat<CR>
+noremap <silent> <F3> :Autoformat<CR>
 
 
 "===============================================================
@@ -348,7 +356,7 @@ let g:indent_guides_guide_size=1
 "===============================================================
 " ale的配置
 "===============================================================
-let g:ale_linters = {'c': []}
+let g:ale_linters = {'c': [], 'cpp': []}
 
 "===============================================================
 " markdown-preview的配置
