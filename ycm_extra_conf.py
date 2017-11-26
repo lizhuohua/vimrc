@@ -70,7 +70,7 @@ flags = [
     '-isystem',
     '../llvm/tools/clang/include',
     '-isystem',
-    '/usr/lib/gcc/x86_64-pc-linux-gnu/5.4.0/include/g++-v5',
+    '/usr/lib/gcc/x86_64-pc-linux-gnu/6.4.0/include/g++-v6',
     '-isystem',
     '/usr/include',
     '-I',
