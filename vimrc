@@ -128,8 +128,8 @@ set cinoptions=g0
 
 " 字体和字号
 if has('unix')
-	set guifont=Monaco\ for\ Powerline\ 17 " English
-	set guifontwide=Microsoft\ Yahei\ 17 "Chinese
+	set guifont=Monaco\ for\ Powerline\ 14 " English
+	set guifontwide=Microsoft\ Yahei\ 14 "Chinese
 elseif has('win32')||has('win64')
 	set guifont=Monaco:h14 " English
 	set guifontwide=Microsoft\ Yahei\ Mono:h14 "Chinese
