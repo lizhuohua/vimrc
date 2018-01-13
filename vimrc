@@ -38,6 +38,8 @@ call plug#begin()
 	Plug 'jceb/vim-orgmode'
 	Plug 'tpope/vim-speeddating'
 	Plug 'mhinz/vim-startify'
+	Plug 'rust-lang/rust.vim'
+	Plug 'junegunn/vim-easy-align'
 call plug#end()
 
 
@@ -370,3 +372,12 @@ let g:vimtex_view_general_viewer = "evince"
 " vim-markdown的配置
 "===============================================================
 let g:vim_markdown_folding_disabled = 1
+
+"===============================================================
+" vim-easy-align的配置
+"===============================================================
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
