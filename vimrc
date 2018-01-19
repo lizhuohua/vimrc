@@ -40,6 +40,8 @@ call plug#begin()
 	Plug 'mhinz/vim-startify'
 	Plug 'rust-lang/rust.vim'
 	Plug 'junegunn/vim-easy-align'
+	Plug 'alpertuna/vim-header'
+	Plug 'vim-scripts/DoxygenToolkit.vim'
 call plug#end()
 
 
@@ -215,12 +217,12 @@ set synmaxcol=128
 cmap w!! %!sudo tee > /dev/null %
 
 " <Leader>p = 从系统剪切板粘贴
-map <Leader>p "+p
+map <silent> <Leader>p "+p
 
 " <Leader>y = 从系统剪切板复制
 " 使用visual模式来选择范围，或者不用visual模式默认选择当前行
-vnoremap <Leader>y "+y
-nnoremap <Leader>y V"+y
+vnoremap <silent> <Leader>y "+y
+nnoremap <silent> <Leader>y V"+y
 
 " 对于长行，自动折行后按屏幕行移动而不是实际行
 " 对于j、k，若有命令计数，仍按实际行移动
@@ -381,3 +383,21 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+"===============================================================
+" vim-header的配置
+"===============================================================
+let g:header_field_author = 'Li Zhuohua'
+let g:header_field_author_email = 'lizhuohua1994@gmail.com'
+let g:header_auto_add_header = 0
+map <F4> :AddHeader<CR>
+
+"===============================================================
+" DoxygenToolkit.vim的配置
+"===============================================================
+let g:DoxygenToolkit_authorName="Li Zhuohua"
+let g:doxygen_enhanced_color = 1
+map <localleader>da :DoxAuthor<CR>
+map <localleader>df :Dox<CR>
+map <localleader>db :DoxBlock<CR>
+map <localleader>dc a <LEFT><LEFT><LEFT>
