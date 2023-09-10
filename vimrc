@@ -8,10 +8,8 @@ set nocompatible
 let mapleader="\<Space>"
 let maplocalleader = "\\"
 call plug#begin()
-    Plug 'Valloric/YouCompleteMe'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    Plug 'terryma/vim-multiple-cursors'
     Plug 'easymotion/vim-easymotion'
     Plug 'scrooloose/nerdcommenter'
     Plug 'nathanaelkane/vim-indent-guides'
@@ -29,50 +27,16 @@ call plug#begin()
     Plug 'jacoborus/tender.vim'
     Plug 'sheerun/vim-polyglot'
     Plug 'wellle/targets.vim'
-    Plug 'iamcco/markdown-preview.vim'
-    Plug 'iamcco/mathjax-support-for-mkdp'
     Plug 'godlygeek/tabular'
-    Plug 'plasticboy/vim-markdown'
-    Plug 'lervag/vimtex'
-    Plug 'jceb/vim-orgmode'
     Plug 'tpope/vim-speeddating'
     Plug 'mhinz/vim-startify'
     Plug 'junegunn/vim-easy-align'
-    Plug 'alpertuna/vim-header'
-    Plug 'vim-scripts/DoxygenToolkit.vim'
-    Plug 'rust-lang/rust.vim'
-    Plug 'compnerd/arm64asm-vim'
     Plug 'tpope/vim-dispatch'
     Plug 'neomake/neomake'
     Plug 'jiangmiao/auto-pairs'
     Plug 'luochen1990/rainbow'
     Plug 'ryanoasis/vim-devicons'
 call plug#end()
-
-
-"================================================================
-" YouCompleteMe的配置
-"================================================================
-" 默认的配置文件放在vimrc同级目录下
-let g:ycm_global_ycm_extra_conf=expand('<sfile>:p:h') . '/ycm_extra_conf.py'
-" 关闭配置文件加载提醒
-let g:ycm_confirm_extra_conf=0
-" 自动关闭preview窗口
-let g:ycm_autoclose_preview_window_after_insertion=1
-let g:ycm_autoclose_preview_window_after_completion = 1
-" CTRL-O和CTRL-I来前后跳转
-" <leader>+d 跳转到定义
-nnoremap <leader>d :YcmCompleter GoToDefinitionElseDeclaration<CR>
-" <leader>+i 跳转到头文件
-nnoremap <leader>i :YcmCompleter GoToInclude<CR>
-" <leader>+t 获取变量类型
-nnoremap <leader>t :YcmCompleter GetType<CR>
-" 自动使用语义补全
-let g:ycm_semantic_triggers =  {
-            \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
-            \ 'cs,lua,javascript': ['re!\w{2}'],
-            \ 'rust': ['::', '.', 're!\w{2}'],
-            \ }
 
 
 "================================================================
@@ -145,8 +109,8 @@ set cinoptions=g0
 
 " 字体和字号
 if has('unix')
-    set guifont=Monaco\ for\ Powerline\ 14 " English
-    set guifontwide=Microsoft\ Yahei\ 14 "Chinese
+    set guifont=Monaco\ for\ Powerline\ 20 " English
+    set guifontwide=Microsoft\ Yahei\ 20 "Chinese
 elseif has('win32')||has('win64')
     set guifont=Monaco:h14 " English
     set guifontwide=Microsoft\ Yahei\ Mono:h14 "Chinese
@@ -404,28 +368,6 @@ let g:indent_guides_guide_size=1
 
 
 "===============================================================
-" ale的配置
-"===============================================================
-" c/c++使用YouCompleteMe进行诊断，故这里留空
-let g:ale_linters = {'c': [], 'cpp': [], 'rust': ['rls']}
-
-
-"===============================================================
-" markdown-preview的配置
-"===============================================================
-let g:mkdp_path_to_chrome = "chromium"
-
-let g:vimtex_latexmk_options = "-xelatex -shell-escape -verbose -pdf -file-line-error -synctex=1 -interaction=nonstopmode"
-let g:vimtex_view_general_viewer = "evince"
-
-
-"===============================================================
-" vim-markdown的配置
-"===============================================================
-let g:vim_markdown_folding_disabled = 1
-
-
-"===============================================================
 " vim-easy-align的配置
 "===============================================================
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -433,23 +375,3 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
-
-
-"===============================================================
-" vim-header的配置
-"===============================================================
-let g:header_field_author = 'Li Zhuohua'
-let g:header_field_author_email = 'lizhuohua1994@gmail.com'
-let g:header_auto_add_header = 0
-map <F4> :AddHeader<CR>
-
-
-"===============================================================
-" DoxygenToolkit.vim的配置
-"===============================================================
-let g:DoxygenToolkit_authorName="Li Zhuohua"
-let g:doxygen_enhanced_color = 1
-map <localleader>da :DoxAuthor<CR>
-map <localleader>df :Dox<CR>
-map <localleader>db :DoxBlock<CR>
-map <localleader>dc a <LEFT><LEFT><LEFT>
