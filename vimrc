@@ -15,8 +15,6 @@ call plug#begin()
     Plug 'nathanaelkane/vim-indent-guides'
     Plug 'terryma/vim-expand-region'
     Plug 'ctrlpvim/ctrlp.vim'
-    Plug 'SirVer/ultisnips'
-    Plug 'honza/vim-snippets'
     Plug 'Chiel92/vim-autoformat'
     Plug 'scrooloose/nerdtree'
     Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -328,16 +326,6 @@ map <Leader>K <Plug>(easymotion-k)
 map <Leader>H <Plug>(easymotion-linebackward)
 map <Leader>L <Plug>(easymotion-lineforward)
 map <Leader>. <Plug>(easymotion-repeat)
-
-
-"===============================================================
-" Ultisnips的配置
-"===============================================================
-" Ctrl-e触发补全
-let g:UltiSnipsExpandTrigger="<c-e>"
-" Ctrl-f，Ctrl-b前后移动光标
-let g:UltiSnipsJumpForwardTrigger="<c-f>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 
 "===============================================================
